@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Add your CSS file link here -->
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Job Portal</h1>
+        <!-- Navigation links -->
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#register">Register</a></li>
+                <li><a href="#jobs">Jobs</a></li>
+                <li><a href="#upload">Upload Resume</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- User registration form -->
+        <section id="register">
+            <h2>Register</h2>
+            <form action="register.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <!-- Login form -->
+        <section id="login">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <label for="login_username">Username:</label>
+                <input type="text" id="login_username" name="login_username" required>
+                <label for="login_password">Password:</label>
+                <input type="password" id="login_password" name="login_password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <!-- Job listings -->
+        <section id="jobs">
+            <h2>Job Listings</h2>
+            <!-- Display job listings fetched from the server -->
+            <!-- This could be dynamically generated using JavaScript -->
+        </section>
+
+        <!-- Resume upload form -->
+        <section id="upload">
+            <h2>Upload Resume</h2>
+            <form action="upload.php" method="POST" enctype="multipart/form-data">
+                <input type="file" name="resume" id="resume" accept=".pdf,.doc,.docx">
+                <button type="submit">Upload</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Job Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
